@@ -33,7 +33,7 @@ export default function Home() {
   const [vaults, setVaults] = useState<Vault[]>([
     {
       id: "1",
-      name: "NYC Apartment Fund",
+      name: "Smith Family Vault",
       collected: 400,
       target: 500,
       members: ["A", "B", "C", "D"],
