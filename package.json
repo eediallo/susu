@@ -2,10 +2,37 @@
   "name": "susu-monorepo",
   "version": "1.0.0",
   "private": true,
+  "description": "Susu Decentralized Savings Protocol",
   "workspaces": [
     "frontend"
   ],
   "scripts": {
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm run build",
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network polygon_amoy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eediallo/susu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@openzeppelin/contracts": "^5.3.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "chai": "^4.2.0",
+    "dotenv": "^16.5.0",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.22.5",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0",
+    "typechain": "^8.3.0"
   }
 }

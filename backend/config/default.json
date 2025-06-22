@@ -1,0 +1,36 @@
+{
+    "app": {
+      "name": "Susu Backend Service",
+      "version": "1.0.0",
+      "description": "The backend API for the Susu AI-Powered Smart Vault dApp, handling off-chain logic, AI suggestions, and contract interaction."
+    },
+    "server": {
+      "corsOptions": {
+        "origin": "*",
+        "methods": "GET,HEAD,PUT,PATCH,POST,DELETE"
+      }
+    },
+    "ai": {
+      "model": "gemini-pro",
+      "promptContext": "You are a financial advisor for a community savings group (a 'susu' or 'ROSCA'). Your task is to suggest a fair and logical way to split a payout.",
+      "defaultTimeoutMs": 30000,
+      "responseFormat": {
+        "type": "json",
+        "schema": {
+          "recipients": "string[]",
+          "amounts": "string[]"
+        }
+      }
+    },
+    "blockchain": {
+      "defaultNetwork": "polygon_amoy",
+      "transactionQueue": {
+        "processingIntervalMs": 5000,
+        "maxRetries": 3
+      },
+      "gasStation": {
+        "gasLimitDefault": "500000"
+      }
+    }
+  }
+  
